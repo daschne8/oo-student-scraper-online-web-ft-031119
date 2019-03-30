@@ -3,7 +3,7 @@ require 'pry'
 
 # doc = Scraper.scrape_index_page("./fixtures/student-site/index.html")
 # pdoc = Scraper.scrape_profile_page("./fixtures/student-site/students/joe-burgess.html")
-# 
+#
 # binding.pry
 
 describe "Scraper" do

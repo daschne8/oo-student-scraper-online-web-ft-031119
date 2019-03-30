@@ -23,10 +23,10 @@ class Scraper
     html = open(profile_url)
     doc = Nokogiri::HTML(html)
     student_file = {
-      twitter: doc.css("div.social-icon-container a").[0]['href'],
-      linkedin: doc.css("div.social-icon-container a").[1]['href'],
-      github: doc.css("div.social-icon-container a").[2]['href'],
-      blog: doc.css("div.social-icon-container a").[3]['href'],
+      twitter: doc.css("div.social-icon-container a")[0]['href'],
+      linkedin: doc.css("div.social-icon-container a")[1]['href'],
+      github: doc.css("div.social-icon-container a")[2]['href'],
+      blog: doc.css("div.social-icon-container a")[3]['href'],
       profile_quote: doc.css("div.profile-quote").text.strip,
       bio: doc.css("div.description-holder p").text
     }

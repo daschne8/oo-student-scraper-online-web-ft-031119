@@ -1,4 +1,9 @@
 require "spec_helper"
+require 'pry'
+
+doc = Scraper.scrape_profile_page("./fixtures/student-site/students/richard-lu.html")
+
+binding.pry
 
 describe "Scraper" do
 

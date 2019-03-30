@@ -30,6 +30,7 @@ class Scraper
       profile_quote: doc.css("div.profile-quote").text.strip,
       bio: doc.css("div.description-holder p").text
     }
+    student_file
   end
 
 end

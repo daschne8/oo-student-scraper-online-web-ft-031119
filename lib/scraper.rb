@@ -30,19 +30,18 @@ class Scraper
       # blog: doc.css("div.social-icon-container a")[3]['href'],
       profile_quote: doc.css("div.profile-quote").text.strip,
       bio: doc.css("div.description-holder p").text
-    }
-    doc.css("div.social-icon-container a").each do |anchor|
-      case a = anchor['href']
-      when a.include?('twit')
-        student_file[:twitter] = a
-      when a.include?('link')
-        student_file[:linkedin] = a
-      when a.include?('git')
-        student_file[:github] = a
-      else
-         student_file[:blog] = a
-      end
-
+      }
+      doc.css("div.social-icon-container a").each do |anchor|
+        case a = anchor['href']
+        when a.include?('twit')
+          student_file[:twitter] = a
+        when a.include?('link')
+          student_file[:linkedin] = a
+        when a.include?('git')
+          student_file[:github] = a
+        else
+           student_file[:blog] = a
+        end
     end
     student_file
   end

@@ -32,7 +32,8 @@ class Scraper
       bio: doc.css("div.description-holder p").text
       }
       doc.css("div.social-icon-container a").each do |anchor|
-        case a = anchor['href']
+        a = anchor['href']
+        case 
         when a.include?('twit')
           student_file[:twitter] = a
         when a.include?('link')
